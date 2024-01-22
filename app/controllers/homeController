@@ -1,0 +1,22 @@
+<?php
+
+use azhar\belajar\php\mvc\controllers;
+
+class homeController
+{
+
+  function index(): void
+  {
+    echo "homeController.index()";
+  }
+
+  function hello(): void
+  {
+    echo "homeController.hello()";
+  }
+
+  function world(): void
+  {
+    echo "homeController.world()";
+  }
+}

@@ -1,9 +1,12 @@
 <?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use azhar\belajar\php\mvc\App\router;
+use azhar\belajar\php\mvc\controllers\homeController;
+
+Router::add('GET', '/', homeController::class, 'index');
+Router::add('GET', '/hello', homeController::class, 'hello');
+Router::add('GET', '/world', homeController::class, 'world');
 
 
-$PATH = '/index';
-if (isset($_SERVER['PATH_INFO'])) {
-  $PATH = $_SERVER['PATH_INFO'];
-}
-
-require __DIR__ . '/../app/views' . $PATH . '.php';
+Router::run();
